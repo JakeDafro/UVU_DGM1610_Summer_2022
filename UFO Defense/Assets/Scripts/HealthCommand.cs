@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class HealthCommand : MonoBehaviour
 {
     public float horizontalInput;
 
@@ -12,9 +12,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform blaster;
 
-    public GameObject laser;
-
-    
+    public GameObject healthComp;
 
    
     // Update is called once per frame
@@ -36,17 +34,17 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.X))
         {
-            Instantiate(laser, blaster.transform.position, laser.transform.rotation);
+            Instantiate(healthComp, blaster.transform.position, healthComp.transform.rotation);
         }
-
 
         
     }
-
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
     }
+
+    
 }
