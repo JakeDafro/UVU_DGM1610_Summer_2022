@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6637295941012567900}
   - component: {fileID: 9003283400505526424}
   - component: {fileID: -4556173574059280665}
-  - component: {fileID: -6570923506333118341}
   m_Layer: 0
   m_Name: UFO_Scout
   m_TagString: Untagged
@@ -113,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3005eacf35dbcfb429a5c69601fd38e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 35
+  speed: 10
 --- !u!114 &9003283400505526424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,15 +143,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-6570923506333118341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3524426229472895482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 306f9b9861318bd4490bd86475ec0ae7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

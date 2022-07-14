@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 386820624}
   - component: {fileID: 386820623}
   - component: {fileID: 386820622}
-  - component: {fileID: 386820627}
   - component: {fileID: 386820628}
   - component: {fileID: 386820629}
   m_Layer: 0
@@ -154,7 +153,7 @@ BoxCollider:
   m_GameObject: {fileID: 386820621}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -216,7 +215,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386820621}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: -7}
+  m_LocalPosition: {x: 0, y: 0, z: -7}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -225,23 +224,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &386820627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386820621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1d0d69716fc3014dad13f89d963d928, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalInput: 0
-  speed: 1
-  xRange: 28
-  blaster: {fileID: 440546655}
-  healthComp: {fileID: 1057046924819758321, guid: 9049523003160e24fa6810210511bd1a, type: 3}
 --- !u!54 &386820628
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -284,6 +266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440546655}
+  - component: {fileID: 440546656}
   m_Layer: 0
   m_Name: HealthBlaster
   m_TagString: Untagged
@@ -298,14 +281,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440546654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4.53}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 386820625}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &440546656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440546654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab5bc82d7bd08ed4dbf4edf21c4e6a82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPrefab:
+  - {fileID: 1057046924819758321, guid: 9049523003160e24fa6810210511bd1a, type: 3}
+  healthFlash: {fileID: 0}
 --- !u!1 &612145273
 GameObject:
   m_ObjectHideFlags: 0
