@@ -14,7 +14,7 @@ public class HealthSpawn : MonoBehaviour
 
     private float spawnInterval = 3f;
 
-    public ParticleSystem healthFlash;
+    
     
     void Start()
     {
@@ -34,6 +34,6 @@ public class HealthSpawn : MonoBehaviour
          Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX),0,spawnPosZ );
          int healthIndex = Random.Range(0,healthPrefab.Length); // Picks random UFO Array
          Instantiate(healthPrefab[healthIndex], spawnPos, healthPrefab[healthIndex].transform.rotation);
-         healthFlash.Play();
+         
     }
 }
