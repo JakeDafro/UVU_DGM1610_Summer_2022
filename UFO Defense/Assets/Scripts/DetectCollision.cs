@@ -8,14 +8,20 @@ public class DetectCollision : MonoBehaviour
 
     public int scoreToGive;
 
+    public AudioSource explosion;
+
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        explosion = GetComponent<AudioSource>();
     }
     void OnTriggerEnter(Collider other)
     {
         scoreManager.IncreaseScore(scoreToGive);
         Destroy(gameObject);
         Destroy(other.gameObject);
+        explosion.Play ();
     }
+
+    
 }

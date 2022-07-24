@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
+    public AudioSource laserBeam;
+
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -41,14 +43,21 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false)
         {
             Instantiate(laser, blaster.transform.position, laser.transform.rotation);
+            PlayLaserBeam();
         }
 
 
         
     }
+
+    public void PlayLaserBeam()
+        {
+            laserBeam.Play();
+        }
+    
 
     private void OnTriggerEnter(Collider other)
     {
